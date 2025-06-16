@@ -1,257 +1,44 @@
-.header-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 15px;
-  padding: 4px 32px 0 32px;
-  background: #fff;
-  border-bottom: 1px solid #f0f0f0;
-}
-
-.header-social a {
-  margin-right: 12px;
-  display: inline-block;
-  vertical-align: middle;
-}
-
-.header-social img {
-  width: 22px;
-  height: 22px;
-  display: block;
-}
-
-.header-contact {
-  display: flex;
-  gap: 18px;
-  align-items: center;
-}
-
-.header-contact .icon {
-  width: 16px;
-  height: 16px;
-  margin-right: 4px;
-  vertical-align: middle;
-}
-
-.header-contact a {
-  color: #1565c0;
-  text-decoration: none;
-  margin-left: 2px;
-}
-
-.doctor-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 16px 32px 0 32px;
-  background: #fff;
-  border-bottom: 1px solid #e0e0e0;
-}
-
-.header-left {
-  display: flex;
-  align-items: center;
-}
-
-.doctor-logo-circle {
-  width: 36px;
-  height: 36px;
-  background: #1565c0;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: 12px;
-}
-
-.doctor-logo-plus {
-  color: #fff;
-  font-size: 1.7rem;
-  font-weight: bold;
-  line-height: 1;
-}
-
-.doctor-name {
-  font-size: 1.3rem;
-  font-weight: bold;
-  color: #1565c0;
-}
-
-.header-nav {
-  display: flex;
-  align-items: center;
-  gap: 24px;
-  margin-left: 40px;
-}
-
-.header-nav a {
-  text-decoration: none;
-  color: #222;
-  font-weight: 500;
-  padding: 4px 0;
-  transition: color 0.2s;
-  position: relative;
-}
-
-.header-nav a.active,
-.header-nav a:hover {
-  color: #1565c0;
-}
-
-.consult-btn {
-  background: #1565c0;
-  color: #fff;
-  font-weight: 600;
-  border: none;
-  border-radius: 7px;
-  padding: 8px 28px;
-  font-size: 1rem;
-  cursor: pointer;
-  margin-left: 32px;
-  transition: background 0.2s;
-}
-
-.consult-btn:hover {
-  background: #0d47a1;
-}
-
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-/* Topbar styles */
-.topbar {
-  background: #f8f9fa;
-  border-bottom: 1px solid #e0e0e0;
-  font-size: 0.97rem;
-  z-index: 1030;
-}
-
-.social-icons a {
-  font-size: 1.25rem;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 2rem;
-  height: 2rem;
-  border-radius: 50%;
-  transition: background 0.2s, color 0.2s;
-  margin-right: 0.25rem;
-  text-decoration: none;
-}
-.social-icons a:last-child {
-  margin-right: 0;
-}
-.social-icons a.text-success:hover,
-.social-icons a.text-success:focus {
-  background: #e6f4ea;
-}
-.social-icons a.text-danger:hover,
-.social-icons a.text-danger:focus {
-  background: #fdeaea;
-}
-.social-icons a.text-primary:hover,
-.social-icons a.text-primary:focus {
-  background: #eaf1fd;
-}
-.social-icons a.instagram:hover,
-.social-icons a.instagram:focus {
-  background: #fbeff6;
-}
-
-.contact-info span {
-  margin-right: 1.5rem;
-  display: flex;
-  align-items: center;
-}
-.contact-info span:last-child {
-  margin-right: 0;
-}
-.contact-info i {
-  font-size: 1.1rem;
-  margin-right: 0.4rem;
-}
-
-/* Navbar styles */
 .navbar {
   background: #fff;
   border-bottom: 1px solid #e0e0e0;
   z-index: 1020;
 }
+
 .navbar-brand {
   font-size: 1.3rem;
   font-weight: 600;
   color: #0d6efd !important;
 }
+
 .navbar-nav .nav-link {
   color: #222 !important;
   font-weight: 500;
   padding: 0.5rem 1rem;
   transition: color 0.2s;
 }
+
 .navbar-nav .nav-link.active,
 .navbar-nav .nav-link:focus,
 .navbar-nav .nav-link:hover {
   color: #0d6efd !important;
 }
+
 .navbar-nav .dropdown-menu {
   font-size: 1rem;
   border-radius: 0.5rem;
   min-width: 180px;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
 }
+
 .navbar-nav .dropdown-item {
   padding: 0.5rem 1.25rem;
   transition: background 0.2s;
 }
+
 .navbar-nav .dropdown-item:hover,
 .navbar-nav .dropdown-item:focus {
   background: #f1f7ff;
   color: #0d6efd;
-}
-
-/* Online Consultation Button */
-.btn-consult {
-  background: #0d6efd;
-  color: #fff !important;
-  font-weight: 600;
-  border-radius: 6px;
-  padding: 0.5rem 1.5rem;
-  box-shadow: 0 2px 8px rgba(13,110,253,0.08);
-  transition: background 0.2s, box-shadow 0.2s;
-  border: none;
-}
-.btn-consult:hover,
-.btn-consult:focus {
-  background: #0b5ed7;
-  color: #fff !important;
-  box-shadow: 0 4px 16px rgba(13,110,253,0.13);
-  text-decoration: none;
-}
-
-/* Mobile social icons bar */
-@media (max-width: 991.98px) {
-  .d-lg-none .social-icons a {
-    margin-right: 1.2rem;
-    font-size: 1.4rem;
-  }
-  .d-lg-none .social-icons a:last-child {
-    margin-right: 0;
-  }
-}
-
-/* Responsive tweaks */
-@media (max-width: 575.98px) {
-  .topbar .container,
-  .navbar .container {
-    padding-left: 8px;
-    padding-right: 8px;
-  }
-  .contact-info span {
-    margin-right: 0.7rem;
-    font-size: 0.95rem;
-  }
 }
 
 .header-wrapper.header-collapsed .topbar {
@@ -263,7 +50,7 @@
   padding-bottom: 0.2rem !important;
   min-height: 48px !important;
   transition: padding 0.2s, min-height 0.2s;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
 }
 
 .header-wrapper.header-collapsed .navbar-brand span,
@@ -286,7 +73,6 @@
   font-size: 0.97rem !important;
 }
 
-/* Converted Angular CSS (scoped, no IDs, use classes) */
 .navbar-custom {
   background-color: #f1f1f1;
   transition: 0.4s;
@@ -294,10 +80,4 @@
   width: 100%;
   top: 0;
   z-index: 99;
-}
-
-@media screen and (max-width: 580px) {
-  .navbar-custom {
-    padding: 20px 10px !important;
-  }
 }
