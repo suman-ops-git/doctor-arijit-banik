@@ -1,8 +1,11 @@
-<section class="region-section py-5">
+<section class="region-section py-5 region-bg">
     <div class="container">
-        <h2>Locations We Served</h2>
-        <section class="locations-section" style="margin-top: 2rem;">
-            <ul class="nav nav-tabs" id="locationTabs" role="tablist">
+        <h2 class="text-center mb-4 text-primary region-title">
+            <i class="bi bi-geo-alt-fill me-2 region-title-icon"></i>
+            Locations We Served
+        </h2>
+        <section class="locations-section">
+            <ul class="nav nav-tabs justify-content-center mb-4" id="locationTabs" role="tablist">
                 <li class="nav-item" role="presentation">
                     <button class="nav-link active" id="kolkata-tab" data-bs-toggle="tab" data-bs-target="#kolkata"
                         type="button" role="tab" aria-controls="kolkata" aria-selected="true">Kolkata</button>
@@ -21,23 +24,86 @@
                         Parganas</button>
                 </li>
             </ul>
-            <div class="tab-content" id="locationTabsContent"
-                style="padding: 1rem; border: 1px solid #dee2e6; border-top: none;">
+            <div class="tab-content shadow rounded bg-white" id="locationTabsContent"
+                style="padding: 2rem 1.5rem; border: 1px solid #dee2e6; border-top: none;">
                 <div class="tab-pane fade show active" id="kolkata" role="tabpanel" aria-labelledby="kolkata-tab">
-                    <!-- Kolkata location details go here -->
-                    <p>Kolkata location information.</p>
+                    <div class="mb-3">
+                        <h4 class="mb-4 text-center text-success region-branch-title">
+                            <i class="bi bi-building me-2"></i>Kolkata Branches
+                        </h4>
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <div class="card border-0 shadow-sm h-100 region-card">
+                                    <div class="card-body">
+                                        <h5 class="card-title mb-2"><i class="bi bi-geo-alt-fill me-2 text-success"></i>Salt Lake
+                                        </h5>
+                                        <p class="card-text text-muted small mb-0">EC Block, Sector 1, Salt Lake City, Kolkata,
+                                            West Bengal 700064</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card border-0 shadow-sm h-100 region-card">
+                                    <div class="card-body">
+                                        <h5 class="card-title mb-2"><i class="bi bi-geo-alt-fill me-2 text-success"></i>Newtown
+                                        </h5>
+                                        <p class="card-text text-muted small mb-0">Action Area 1, Newtown, Kolkata, West Bengal
+                                            700156</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card border-0 shadow-sm h-100 region-card">
+                                    <div class="card-body">
+                                        <h5 class="card-title mb-2"><i class="bi bi-geo-alt-fill me-2 text-success"></i>Garia
+                                        </h5>
+                                        <p class="card-text text-muted small mb-0">Garia Station Road, Garia, Kolkata, West Bengal
+                                            700084</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card border-0 shadow-sm h-100 region-card">
+                                    <div class="card-body">
+                                        <h5 class="card-title mb-2"><i class="bi bi-geo-alt-fill me-2 text-success"></i>Manicktala
+                                        </h5>
+                                        <p class="card-text text-muted small mb-0">Manicktala Main Road, Manicktala, Kolkata, West
+                                            Bengal 700054</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="tab-pane fade" id="murshidabad" role="tabpanel" aria-labelledby="murshidabad-tab">
-                    <!-- Murshidabad location details go here -->
-                    <p>Murshidabad location information.</p>
+                    <div class="mb-3">
+                        <div class="card border-0 shadow-sm region-card">
+                            <div class="card-body">
+                                <h4 class="mb-3 text-success"><i class="bi bi-geo-alt-fill me-2"></i>Murshidabad</h4>
+                                <p class="text-muted">Murshidabad location information.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="tab-pane fade" id="hooghly" role="tabpanel" aria-labelledby="hooghly-tab">
-                    <!-- Hooghly location details go here -->
-                    <p>Hooghly location information.</p>
+                    <div class="mb-3">
+                        <div class="card border-0 shadow-sm region-card">
+                            <div class="card-body">
+                                <h4 class="mb-3 text-success"><i class="bi bi-geo-alt-fill me-2"></i>Hooghly</h4>
+                                <p class="text-muted">Hooghly location information.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="tab-pane fade" id="north24" role="tabpanel" aria-labelledby="north24-tab">
-                    <!-- 24 North Parganas location details go here -->
-                    <p>24 North Parganas location information.</p>
+                    <div class="mb-3">
+                        <div class="card border-0 shadow-sm region-card">
+                            <div class="card-body">
+                                <h4 class="mb-3 text-success"><i class="bi bi-geo-alt-fill me-2"></i>24 North Parganas</h4>
+                                <p class="text-muted">24 North Parganas location information.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
