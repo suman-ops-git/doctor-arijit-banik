@@ -1,0 +1,99 @@
+{
+  "regions": [
+    {
+      "name": "Kolkata",
+      "branches": [
+        {
+          "title": "SSKM Hospital (Bangur Institute of Neurosciences)",
+          "address": "SSKM Hospital Road, Bhowanipore, Kolkata - 700020",
+          "phone": ""
+        },
+        {
+          "title": "B.P. Poddar Hospital & Medical Research Ltd",
+          "address": "71/1, Humayun Kabir Sarani, Block G, New Alipore, Kolkata - 700053",
+          "phone": "+91 85850 35846"
+        },
+        {
+          "title": "Netaji Subhash Chandra Bose Medical Centre",
+          "address": "16A, Park Lane, Taltala, Kolkata - 700016",
+          "phone": "+91 82401 26717"
+        },
+        {
+          "title": "Theism Diagnostics (North Dumdum)",
+          "address": "46, Lalji, Khub Lal Saha Street, North Dumdum - 700028",
+          "phone": "+91 80-68196819"
+        }
+      ]
+    },
+    {
+      "name": "Murshidabad",
+      "branches": [
+        {
+          "title": "The O2 Hospitals (Dhuliyan)",
+          "address": "NH114A, Ghoramara, Murshidabad - 742202",
+          "phone": "+91 98002 62011"
+        },
+        {
+          "title": "Janakalyan Medical Centre",
+          "address": "Kandi Kalibar Road (Near SBI) Murshidabad",
+          "phone": "+91 9547255304/+91 7363085404"
+        }
+      ]
+    },
+    {
+      "name": "Hooghly",
+      "branches": [
+        {
+          "title": "Arambagh / Udaynarayanpur",
+          "address": "Address and contact no will be updated sortly",
+          "phone": ""
+        },
+        {
+          "title": "Singur / Dankuni",
+          "address": "Address and contact no will be updated sortly",
+          "phone": ""
+        }
+      ]
+    },
+    {
+      "name": "24 North Parganas",
+      "branches": [
+        {
+          "title": "Madhyamgram / Barasat / New Barrackpore",
+          "address": "Address and contact no will be updated sortly",
+          "phone": ""
+        }
+      ]
+    },
+    {
+      "name": "Medinipur",
+      "branches": [
+        {
+          "title": "Bagnan / Tamluk / Kanthi",
+          "address": "Address and contact no will be updated sortly",
+          "phone": ""
+        },
+        {
+          "title": "Debra / Panskura",
+          "address": "Address and contact no will be updated sortly",
+          "phone": ""
+        }
+      ]
+    },
+    {
+      "name": "South 24 Parganas",
+      "branches": [
+        {
+          "title": "Baruipur / Diamond Harbour",
+          "address": "Address and contact no will be updated shortly",
+          "phone": ""
+        },
+        {
+          "title": "Sonarpur / Canning",
+          "address": "Address and contact no will be updated shortly",
+          "phone": ""
+        }
+      ]
+    }
+  ]
+}

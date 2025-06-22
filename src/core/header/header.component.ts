@@ -8,6 +8,7 @@ import { ViewportScroller } from '@angular/common';
 })
 export class HeaderComponent {
   isCollapsed = false;
+  activeNav: string = 'home';
 
   constructor(private viewportScroller: ViewportScroller) {}
 
@@ -16,8 +17,12 @@ export class HeaderComponent {
     this.isCollapsed = window.scrollY > 80;
   }
 
-  scrollToAbout(event: Event) {
+  setActiveNav(nav: string, event: Event) {
+    this.activeNav = nav;
     event.preventDefault();
+  }
+
+  scrollToAbout(event: Event) {
     this.viewportScroller.scrollToAnchor('about-section');
   }
 
