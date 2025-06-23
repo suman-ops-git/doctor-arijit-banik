@@ -8,6 +8,7 @@ import { MainComponent } from './main/main.component';
 import { TemplateComponent } from './template/template.component';
 import { RegionComponent } from './feature-components/region/region.component';
 import { AboutComponent } from './feature-components/about/about.component';
+import { FeedbackComponent } from './feature-components/feedback/feedback.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { AboutComponent } from './feature-components/about/about.component';
     MainComponent,
     TemplateComponent,
     RegionComponent,
-    AboutComponent
+    AboutComponent,
+    FeedbackComponent
   ],
   imports: [
     CommonModule,

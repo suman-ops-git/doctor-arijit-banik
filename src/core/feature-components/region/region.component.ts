@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { GetApiDataService } from '../../shared-service/get-api-data.service';
-import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-region',
@@ -11,21 +10,17 @@ export class RegionComponent implements OnInit {
   public locations: any = []; // Define the type of locations as needed
 
   constructor(
-    private getApiDataService: GetApiDataService,
-    private http: HttpClient
+    private getApiDataService: GetApiDataService
   ) { }
 
   ngOnInit(): void {
-    console.log('RegionComponent initialized');
     this.getApiDataService.getApiData('json/location.json').subscribe(
       response => {
         this.locations = response.data;
-        console.log('API Data Response:', response.data);
       }
     );
-
   }
-  
+
   sanitizeRegionName(name: string): string {
     // IDs cannot start with a digit, so prefix with a letter if needed
     let sanitized = name
