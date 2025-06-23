@@ -40,10 +40,16 @@
                     <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
                         <ul class="navbar-nav align-items-lg-center">
                             <li class="nav-item">
-                                <a class="nav-link active" href="#">Home</a>
+                                <a class="nav-link"
+                                   [class.active]="activeNav === 'home'"
+                                   href="#"
+                                   (click)="setActiveNav('home', $event)">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="" (click)="scrollToAbout($event)">About Dr.</a>
+                                <a class="nav-link"
+                                   [class.active]="activeNav === 'about'"
+                                   href=""
+                                   (click)="setActiveNav('about', $event); scrollToAbout($event)">About Dr.</a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="treatmentDropdown" role="button"
@@ -67,7 +73,10 @@
                                 </ul>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="" (click)="scrollToRegion($event)">Region</a>
+                                <a class="nav-link"
+                                   [class.active]="activeNav === 'region'"
+                                   href=""
+                                   (click)="setActiveNav('region', $event); scrollToRegion($event)">Region</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">Contact</a>

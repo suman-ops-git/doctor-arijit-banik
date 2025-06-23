@@ -4,261 +4,42 @@
             <i class="bi bi-geo-alt-fill me-2 region-title-icon"></i>
             Locations We Served
         </h2>
-        <section class="locations-section">
-            <ul class="nav nav-tabs justify-content-center mb-4" id="locationTabs" role="tablist">
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link active" id="kolkata-tab" data-bs-toggle="tab" data-bs-target="#kolkata"
-                        type="button" role="tab" aria-controls="kolkata" aria-selected="true">Kolkata</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="murshidabad-tab" data-bs-toggle="tab" data-bs-target="#murshidabad"
-                        type="button" role="tab" aria-controls="murshidabad" aria-selected="false">Murshidabad</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="hooghly-tab" data-bs-toggle="tab" data-bs-target="#hooghly"
-                        type="button" role="tab" aria-controls="hooghly" aria-selected="false">Hooghly</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="north24-tab" data-bs-toggle="tab" data-bs-target="#north24"
-                        type="button" role="tab" aria-controls="north24" aria-selected="false">24 North
-                        Parganas</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="medinipur-tab" data-bs-toggle="tab" data-bs-target="#medinipur"
-                        type="button" role="tab" aria-controls="medinipur" aria-selected="false">Medinipur</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="south24-tab" data-bs-toggle="tab" data-bs-target="#south24"
-                        type="button" role="tab" aria-controls="south24" aria-selected="false">South 24 Parganas</button>
+        <section>
+            <ul class="nav nav-tabs justify-content-center mb-4 locations-section" id="locationTabs" role="tablist">
+                <li class="nav-item" role="presentation" *ngFor="let region of locations?.regions; let i = index">
+                    <button class="nav-link" [class.active]="i === 0"
+                        [id]="sanitizeRegionName(region.name) + '-tab'"
+                        data-bs-toggle="tab"
+                        [attr.data-bs-target]="'#' + sanitizeRegionName(region.name)"
+                        type="button" role="tab"
+                        [attr.aria-controls]="sanitizeRegionName(region.name)"
+                        [attr.aria-selected]="i === 0 ? 'true' : 'false'">
+                        {{ region.name }}
+                    </button>
                 </li>
             </ul>
             <div class="tab-content shadow rounded bg-white" id="locationTabsContent"
                 style="padding: 2rem 1.5rem; border: 1px solid #dee2e6; border-top: none;">
-                <div class="tab-pane fade show active" id="kolkata" role="tabpanel" aria-labelledby="kolkata-tab">
+                <div *ngFor="let region of locations?.regions; let i = index"
+                     class="tab-pane fade"
+                     [class.show]="i === 0"
+                     [class.active]="i === 0"
+                     [id]="sanitizeRegionName(region.name)"
+                     role="tabpanel"
+                     [attr.aria-labelledby]="sanitizeRegionName(region.name) + '-tab'">
                     <div class="mb-3">
                         <h4 class="mb-4 text-center text-success region-branch-title">
-                            <i class="bi bi-building me-2"></i>Kolkata Branches
+                            <i class="bi bi-building me-2"></i>{{ region.name }} Branches
                         </h4>
                         <div class="row g-4">
-                            <div class="col-md-6">
+                            <div class="col-md-6" *ngFor="let branch of region.branches">
                                 <div class="card border-0 shadow-sm h-100 region-card">
                                     <div class="card-body">
-                                        <h5 class="card-title mb-2"><i class="bi bi-geo-alt-fill me-2 text-success"></i>
-                                            SSKM Hospital (Bangur Institute of Neurosciences)
+                                        <h5 class="card-title mb-2">
+                                            <i class="bi bi-geo-alt-fill me-2 text-success"></i>{{ branch.title }}
                                         </h5>
-                                        <p class="card-text text-muted small mb-0">SSKM Hospital Road, Bhowanipore,
-                                            Kolkata - 700020</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="card border-0 shadow-sm h-100 region-card">
-                                    <div class="card-body">
-                                        <h5 class="card-title mb-2"><i class="bi bi-geo-alt-fill me-2 text-success"></i>
-                                            B.P. Poddar Hospital & Medical Research Ltd
-                                        </h5>
-                                        <p class="card-text text-muted small mb-0"> 71/1, Humayun Kabir Sarani, Block G,
-                                            New Alipore, Kolkata - 700053</p>
-                                        <p class="card-text text-muted small mb-0">Phone: +91 85850 35846</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="card border-0 shadow-sm h-100 region-card">
-                                    <div class="card-body">
-                                        <h5 class="card-title mb-2"><i
-                                                class="bi bi-geo-alt-fill me-2 text-success"></i>Netaji Subhash Chandra
-                                            Bose Medical Centre
-                                        </h5>
-                                        <p class="card-text text-muted small mb-0">16A, Park Lane, Taltala, Kolkata -
-                                            700016</p>
-                                        <p class="card-text text-muted small mb-0">Phone: +91 82401 26717</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="card border-0 shadow-sm h-100 region-card">
-                                    <div class="card-body">
-                                        <h5 class="card-title mb-2"><i
-                                                class="bi bi-geo-alt-fill me-2 text-success"></i>Theism Diagnostics
-                                            (North Dumdum)
-                                        </h5>
-                                        <p class="card-text text-muted small mb-0">46, Lalji, Khub Lal Saha Street,
-                                            North Dumdum - 700028</p>
-                                        <p class="card-text text-muted small mb-0">Phone: +91 80-68196819</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="tab-pane fade" id="murshidabad" role="tabpanel" aria-labelledby="murshidabad-tab">
-                    <div class="mb-3">
-                        <div class="card border-0 shadow-sm region-card">
-                            <div class="card-body">
-                                <h4 class="mb-4 text-center text-success region-branch-title">
-                                    <i class="bi bi-building me-2"></i>Murshidabad Branches
-                                </h4>
-                                <div class="row g-4">
-                                    <div class="col-md-6">
-                                        <div class="card border-0 shadow-sm h-100 region-card">
-                                            <div class="card-body">
-                                                <h5 class="card-title mb-2"><i
-                                                        class="bi bi-geo-alt-fill me-2 text-success"></i>The O2
-                                                    Hospitals (Dhuliyan)
-                                                </h5>
-                                                <p class="card-text text-muted small mb-0"> NH114A, Ghoramara,
-                                                    Murshidabad - 742202</p>
-                                                <p class="card-text text-muted small mb-0">Phone: +91 98002 62011</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="card border-0 shadow-sm h-100 region-card">
-                                            <div class="card-body">
-                                                <h5 class="card-title mb-2"><i
-                                                        class="bi bi-geo-alt-fill me-2 text-success"></i>Janakalyan
-                                                    Medical Centre
-                                                </h5>
-                                                <p class="card-text text-muted small mb-0"> Kandi Kalibar Road (Near
-                                                    SBI) Murshidabad </p>
-                                                <p class="card-text text-muted small mb-0">Phone: +91 9547255304/+91
-                                                    7363085404</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="tab-pane fade" id="hooghly" role="tabpanel" aria-labelledby="hooghly-tab">
-                    <div class="mb-3">
-                        <div class="card border-0 shadow-sm region-card">
-                            <div class="card-body">
-                                <h4 class="mb-4 text-center text-success region-branch-title">
-                                    <i class="bi bi-building me-2"></i>Hooghly Branches
-                                </h4>
-                                <div class="row g-4">
-                                    <div class="col-md-6">
-                                        <div class="card border-0 shadow-sm h-100 region-card">
-                                            <div class="card-body">
-                                                <h5 class="card-title mb-2"><i
-                                                        class="bi bi-geo-alt-fill me-2 text-success"></i> Arambagh /
-                                                    Udaynarayanpur
-                                                </h5>
-                                                <p class="card-text text-muted small mb-0"> Address and contact no will
-                                                    be updated sortly</p>
-                                                <p class="card-text text-muted small mb-0"></p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="card border-0 shadow-sm h-100 region-card">
-                                            <div class="card-body">
-                                                <h5 class="card-title mb-2"><i
-                                                        class="bi bi-geo-alt-fill me-2 text-success"></i>Singur /
-                                                    Dankuni
-                                                </h5>
-                                                <p class="card-text text-muted small mb-0"> Address and contact no will
-                                                    be updated sortly </p>
-                                                <p class="card-text text-muted small mb-0"></p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="tab-pane fade" id="north24" role="tabpanel" aria-labelledby="north24-tab">
-                    <div class="mb-3">
-                        <div class="card border-0 shadow-sm region-card">
-                            <div class="card-body">
-                                <h4 class="mb-4 text-center text-success region-branch-title">
-                                    <i class="bi bi-building me-2"></i>North 24 Parganas (Tentative)
-                                </h4>
-                                <div class="row g-4">
-                                    <div class="col-md-6">
-                                        <div class="card border-0 shadow-sm h-100 region-card">
-                                            <div class="card-body">
-                                                <h5 class="card-title mb-2"><i
-                                                        class="bi bi-geo-alt-fill me-2 text-success"></i> Madhyamgram /
-                                                    Barasat / New Barrackpore
-                                                </h5>
-                                                <p class="card-text text-muted small mb-0"> Address and contact no will
-                                                    be updated sortly</p>
-                                                <p class="card-text text-muted small mb-0"></p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="tab-pane fade" id="medinipur" role="tabpanel" aria-labelledby="medinipur-tab">
-                    <div class="mb-3">
-                        <div class="card border-0 shadow-sm region-card">
-                            <div class="card-body">
-                                <h4 class="mb-4 text-center text-success region-branch-title">
-                                    <i class="bi bi-building me-2"></i>Medinipur Branches
-                                </h4>
-                                <div class="row g-4">
-                                    <div class="col-md-6">
-                                        <div class="card border-0 shadow-sm h-100 region-card">
-                                            <div class="card-body">
-                                                <h5 class="card-title mb-2"><i
-                                                        class="bi bi-geo-alt-fill me-2 text-success"></i>Bagnan / Tamluk / Kanthi
-                                                </h5>
-                                                <p class="card-text text-muted small mb-0"> Address and contact no will
-                                                    be updated sortly</p>
-                                                <p class="card-text text-muted small mb-0"></p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="card border-0 shadow-sm h-100 region-card">
-                                            <div class="card-body">
-                                                <h5 class="card-title mb-2"><i
-                                                        class="bi bi-geo-alt-fill me-2 text-success"></i>Debra / Panskura
-                                                </h5>
-                                                <p class="card-text text-muted small mb-0"> Address and contact no will
-                                                    be updated sortly</p>
-                                                <p class="card-text text-muted small mb-0"></p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="tab-pane fade" id="south24" role="tabpanel" aria-labelledby="south24-tab">
-                    <div class="mb-3">
-                        <div class="card border-0 shadow-sm region-card">
-                            <div class="card-body">
-                                <h4 class="mb-4 text-center text-success region-branch-title">
-                                    <i class="bi bi-building me-2"></i>South 24 Parganas Branches
-                                </h4>
-                                <div class="row g-4">
-                                    <div class="col-md-6">
-                                        <div class="card border-0 shadow-sm h-100 region-card">
-                                            <div class="card-body">
-                                                <h5 class="card-title mb-2"><i class="bi bi-geo-alt-fill me-2 text-success"></i>Baruipur / Diamond Harbour</h5>
-                                                <p class="card-text text-muted small mb-0">Address and contact no will be updated shortly</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="card border-0 shadow-sm h-100 region-card">
-                                            <div class="card-body">
-                                                <h5 class="card-title mb-2"><i class="bi bi-geo-alt-fill me-2 text-success"></i>Sonarpur / Canning</h5>
-                                                <p class="card-text text-muted small mb-0">Address and contact no will be updated shortly</p>
-                                            </div>
-                                        </div>
+                                        <p class="card-text text-muted small mb-0">{{ branch.address }}</p>
+                                        <p class="card-text text-muted small mb-0" *ngIf="branch.phone">Phone: {{ branch.phone }}</p>
                                     </div>
                                 </div>
                             </div>
