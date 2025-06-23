@@ -9,6 +9,7 @@ import { TemplateComponent } from './template/template.component';
 import { RegionComponent } from './feature-components/region/region.component';
 import { AboutComponent } from './feature-components/about/about.component';
 import { FeedbackComponent } from './feature-components/feedback/feedback.component';
+import { SafeUrlPipe } from './pipes/safe-url.pipe';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { FeedbackComponent } from './feature-components/feedback/feedback.compon
     TemplateComponent,
     RegionComponent,
     AboutComponent,
-    FeedbackComponent
+    FeedbackComponent,
+    SafeUrlPipe 
   ],
   imports: [
     CommonModule,
