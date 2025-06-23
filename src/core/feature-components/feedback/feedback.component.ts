@@ -11,7 +11,7 @@ export class FeedbackComponent implements OnInit, OnDestroy {
   constructor(private getApiDataService: GetApiDataService) { }
 
   public feedbackList: { comment: string; name: string; date?: string; rating?: number }[] = [];
- 
+
   ngOnInit(): void {
     this.getApiDataService.getApiData('json/feedbackList.json').subscribe(
       response => {
@@ -20,7 +20,7 @@ export class FeedbackComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-   
+
   }
 
 }
