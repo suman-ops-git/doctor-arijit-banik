@@ -23,4 +23,12 @@ export class FeedbackComponent implements OnInit, OnDestroy {
 
   }
 
+  getFeedbackGroup(index: number): { comment: string; name: string; date?: string; rating?: number }[] {
+    // Show 3 cards per slide, sliding by 3
+    const groupSize = 3;
+    if (!this.feedbackList.length) return [];
+    const start = index * groupSize;
+    return this.feedbackList.slice(start, start + groupSize);
+  }
+
 }
