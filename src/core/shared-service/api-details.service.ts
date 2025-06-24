@@ -26,7 +26,7 @@ export class ApiDetailsService {
       .setUrl('json/location.json')
       .setMethod('get')
       .setHeader(this.getHeaders()),
-       new ApiDetails()
+    new ApiDetails()
       .setBaseUrl(this.baseUrl)
       .setVersion(this.version)
       .setUrl('json/feedbackList.json')
