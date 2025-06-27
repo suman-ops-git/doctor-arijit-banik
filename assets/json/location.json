@@ -25,8 +25,15 @@
           "title": "Theism Diagnostics (North Dumdum)",
           "address": "46, Lalji, Khub Lal Saha Street, North Dumdum - 700028",
           "phone": "+91 80-68196819",
-          "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3683.444444444!2d88.3723456!3d22.5523456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a0276c444444444%3A0xabcdefabcdef!2sTheism+Diagnostics!5e0!3m2!1sen!2sin!4v1710000000000!5m2!1sen!2sin"
+          "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3682.4044603363413!2d88.4128056760003!3d22.638703830542948!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f89fe1f0e1da9b%3A0xebbc291c974d287b!2sTheism%20Diagnostics!5e0!3m2!1sen!2sin!4v1751013012590!5m2!1sen!2sin"
+        },
+        {
+          "title": "Eastern Clinical Complex",
+          "address": "285, SK Deb Rd, Block 1, Lake Town, South Dumdum, West Bengal 700048",
+          "phone": " 033 2534 7426",
+          "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3683.3605012069756!2d88.40075537599958!3d22.6030093318538!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a0275fda770c6c3%3A0x35e742623a638f35!2sEastern%20Clinical%20Complex!5e0!3m2!1sen!2sin!4v1751013310703!5m2!1sen!2sin"
         }
+        
       ]
     },
     {
@@ -51,13 +58,13 @@
       "branches": [
         {
           "title": "Arambagh / Udaynarayanpur",
-          "address": "Address and contact no will be updated sortly",
+          "address": "Address and contact no will be updated shortly",
           "phone": "",
           "mapUrl": ""
         },
         {
           "title": "Singur / Dankuni",
-          "address": "Address and contact no will be updated sortly",
+          "address": "Address and contact no will be updated shortly",
           "phone": "",
           "mapUrl": ""
         }
@@ -68,7 +75,7 @@
       "branches": [
         {
           "title": "Madhyamgram / Barasat / New Barrackpore",
-          "address": "Address and contact no will be updated sortly",
+          "address": "Address and contact no will be updated shortly",
           "phone": "",
           "mapUrl": ""
         }
@@ -79,13 +86,13 @@
       "branches": [
         {
           "title": "Bagnan / Tamluk / Kanthi",
-          "address": "Address and contact no will be updated sortly",
+          "address": "Address and contact no will be updated shortly",
           "phone": "",
           "mapUrl": ""
         },
         {
           "title": "Debra / Panskura",
-          "address": "Address and contact no will be updated sortly",
+          "address": "Address and contact no will be updated shortly",
           "phone": "",
           "mapUrl": ""
         }
